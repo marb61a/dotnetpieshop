@@ -1,0 +1,11 @@
+/home/ubuntu/workspace/dotnetpieshop/bin/Debug/netcoreapp2.0/libe_sqlite3.so
+/home/ubuntu/workspace/dotnetpieshop/bin/Debug/netcoreapp2.0/dotnetpieshop.deps.json
+/home/ubuntu/workspace/dotnetpieshop/bin/Debug/netcoreapp2.0/dotnetpieshop.runtimeconfig.json
+/home/ubuntu/workspace/dotnetpieshop/bin/Debug/netcoreapp2.0/dotnetpieshop.runtimeconfig.dev.json
+/home/ubuntu/workspace/dotnetpieshop/bin/Debug/netcoreapp2.0/dotnetpieshop.dll
+/home/ubuntu/workspace/dotnetpieshop/bin/Debug/netcoreapp2.0/dotnetpieshop.pdb
+/home/ubuntu/workspace/dotnetpieshop/obj/Debug/netcoreapp2.0/dotnetpieshop.csproj.CoreCompileInputs.cache
+/home/ubuntu/workspace/dotnetpieshop/obj/Debug/netcoreapp2.0/UserSecretsAssemblyInfo.cs
+/home/ubuntu/workspace/dotnetpieshop/obj/Debug/netcoreapp2.0/dotnetpieshop.AssemblyInfo.cs
+/home/ubuntu/workspace/dotnetpieshop/obj/Debug/netcoreapp2.0/dotnetpieshop.dll
+/home/ubuntu/workspace/dotnetpieshop/obj/Debug/netcoreapp2.0/dotnetpieshop.pdb
