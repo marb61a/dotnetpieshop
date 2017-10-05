@@ -18,13 +18,30 @@ namespace dotnetpieshop.Models{
             _categoryRepository = categoryRepository;
         }
         
-        public ViewResult List()
-        {
-            PiesListViewModel piesListViewModel = new PiesListViewModel();
-            piesListViewModel.Pies = _pieRepository.Pies;
-            piesListViewModel.CurrentCategory = "Cheese cakes";
+        // public ViewResult List()
+        // {
+        //     PiesListViewModel piesListViewModel = new PiesListViewModel();
+        //     piesListViewModel.Pies = _pieRepository.Pies;
+        //     piesListViewModel.CurrentCategory = "Cheese cakes";
 
-            return View(piesListViewModel);
+        //     return View(piesListViewModel);
+        // }
+        
+        public ViewResult List(string category)
+        {
+            IEnumerable<Pie> pies;
+            string currentCategory = string.Empty;
+            
+            if(string.IsNullOrEmpty(category))
+            {
+                pies = _pieRepository.Pies.OrderBy(p => p.PieId);
+                currentCategory = "All Pies";
+            } 
+            else
+            {
+                pies = _pieRepository.Pies.Where(p => p.Category.CategoryName == category).OrderBy(p => p.PieId);
+                currentCategory = _categoryRepository.Categories.FirstOrDefault(c => c.CategoryName == category).CategoryName; 
+            }
         }
     }
 }
