@@ -42,6 +42,21 @@ namespace dotnetpieshop.Models{
                 pies = _pieRepository.Pies.Where(p => p.Category.CategoryName == category).OrderBy(p => p.PieId);
                 currentCategory = _categoryRepository.Categories.FirstOrDefault(c => c.CategoryName == category).CategoryName; 
             }
+            
+            return View(new PiesListViewModel
+            {
+                Pies = pies;
+                CurrentCategory = currentCategory;
+            });
+            
+            public IActionResult Details(int id)
+            {
+                var pie = _pieRepository.GetPieById(id);
+                if(pie == null)
+                    return NotFound();
+                
+                return View(pie);
+            }
         }
     }
 }
